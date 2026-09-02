@@ -1,0 +1,70 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+secrets/
+credentials/
+credentials*.json
+
+# Python environments, tools, and test output
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.pytype/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage/
+
+# Logs, process state, and local runtime data
+logs/
+*.log
+*.pid
+data/
+
+# Frontend dependencies and generated output
+ui/node_modules/
+ui/dist/
+ui/.tanstack/
+ui/.output/
+ui/.vite/
+ui/tsconfig.tsbuildinfo
+.pnpm-store/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Agent-local temporary state
+.tmp_fetch_url_workspace/
+.workbuddy/
+.cache/
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Local IDE and operating-system files
+.idea/
+.vscode/
+.claude/settings.local.json
+.DS_Store
+Thumbs.db
+Desktop.ini

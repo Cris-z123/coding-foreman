@@ -1,0 +1,28 @@
+[project]
+name = "coding-foreman"
+version = "0.1.0"
+description = "AI coding agent"
+requires-python = ">=3.12"
+dependencies = [
+  "deepagents>=0.6.11,<0.7",
+  "fastapi>=0.138.0",
+  "uvicorn>=0.49.0",
+  "langchain-openai>=1.3.2",
+  "langgraph-checkpoint-sqlite>=3.1.0",
+  "python-dotenv>=1.2.2",
+  "requests>=2.32.0",
+  "zhipuai>=2.1.5",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15,<0.16",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# Standalone scripts set up sys.path before importing the local agent package.
+"agent/tests/verify_*.py" = ["E402"]
+"scripts/inspect_deepagents_stream.py" = ["E402"]
